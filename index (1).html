@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CtrlCotton</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>CtrlCotton — Usina Algodoeira</h1>
+
+  <!-- Área onde o leitor aparecerá -->
+  <div id="leitor-qr" style="width: 300px; display: none; margin-bottom: 10px;"></div>
+
+  <!-- Botão para iniciar a câmera -->
+  <button onclick="iniciarLeitor()">📷 Ler Código</button>
+
+  <section class="controle">
+    <label for="setor">Setor:</label>
+    <select id="setor">
+      <option value="uba">UBA</option>
+      <option value="rodoeira">Rodoeira</option>
+      <option value="patio_rolinhos">Pátio Rolinhos</option>
+      <option value="patio_fardinhos">Pátio Fardinhos</option>
+    </select>
+
+    <input type="text" id="codigo" placeholder="Código do Fardo / QR Code" />
+    <button onclick="registrarFardo()">Registrar</button>
+  </section>
+
+  <section>
+    <h2>Fardos Registrados</h2>
+    <ul id="lista-fardos"></ul>
+  <
